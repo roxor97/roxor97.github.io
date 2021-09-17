@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap" rel="stylesheet"> 
+    <link  rel="icon"   href="/assets/icon-mis-gifos.svg" type="imagenes/png" />
+    <title>MIS GIFOS</title>
+</head>
+<body>
+
+    <!-- Header con menu y logo -->
+    <header class="header">
+        <div class="contenedor">
+            <a href="/index.html" class="nav-bar-logo"></a>
+            <input type="checkbox" id="btn-menu" class="checkbox" >
+            <label for="btn-menu" class="btn-burguer"></label>
+            <label for="btn-menu" class="btn-x"></label>
+        
+        <nav class="menu" id="menu">
+            <ul>
+                <li id="btn-dark"><a href="#" class="margin-top" >MODO NOCTURNO </a> <span class="border-bottom-navbar"></span></li>
+                <li id="btn-light"><a href="#" class="margin-top" >MODO DIURNO </a> <span class="border-bottom-navbar"></span></li>
+                <li><a href="/pagina-favoritos.html" >FAVORITOS </a><span class="border-bottom-navbar"></span></li>
+                <li><a href="/pagina-mis-gifos.html" >MIS GIFOS </a></li>
+                <li><a href="/pagina-crear-gif.html"  class="crear-gifo" ></a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Seccion mis gifos creados -->
+        <section class="mis-gifos">
+            <div class="contenedor-icon-gifos">
+                <img src="/assets/icon-mis-gifos.svg" alt="">
+            </div>
+            <h1 class="titulo-gifos">MIS GIFOS</h1>
+            <div class="sin-resultados">
+                <img class="icon-sin-resultado" src="/assets/icon-mis-gifos-sin-contenido.svg" alt="icono sin resultados">
+                <p class="texto">¡Anímate a crear tu primer GIFO!</p>
+            </div>
+            <div class="contenedor-resultados">
+             </div>
+        <div class="modal" id="my-modal">
+            <div class="close-modal"></div>
+            <div class="contenedor-modal">
+                <img class="modal-content" src="#" alt="#">
+            </div>
+            <div class="contenedor-tools-max">
+                <div class="informacion">
+                    <h2 class="user user-modal"></h2>
+                    <p class="gift-titulo titulo-modal">Título del gif</p>
+                </div>
+                <div class="icon-tools">
+                    <div class="icon-favorito-modal"></div>
+                    <div class="icon-descargar"></div>
+                 </div>
+
+            </div>
+
+        </div>
+        <div class="contenedor-boton">
+            <button class="ver-mas">VER MÁS</button>
+        </div>
+        </section>
+
+        <!-- Trending Gifos -->
+        <section class="trending-gifos">
+            <div class="contenedor">
+                <h2>Trending GIFOS</h2>
+                <p>Mira los últimos <br> GIFOS de nuestra comunidad.</p>
+                <div class="contenedor-resultados" id="contenedor-trending">
+                    <div class="sliderLeft"></div>
+                    <div class="sliderRight"></div>
+               </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer, redes sociales y copyright -->
+    <footer>
+        <section class="footer">
+            
+            <div class="contenedor">
+                <p>Compartir en:</p>
+                <div class="contenedor-redes-sociales">
+                    <a href="https://www.facebook.com/">
+                        <div class="facebook"></div>
+                    </a>
+                    <a href="https://twitter.com/">
+                        <div class="twitter"></div>
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <div class="instagram"></div>
+                    </a>
+                </div>
+            </div>
+
+            <p class="rights">© GIFOS 2021 All Rights Reserved.</p>
+        </section>
+    </footer>
+
+    <!-- Enlaces JavaScript -->
+    <script src="/js/mis-gifos.js"></script>
+    <script src="/js/funciones-icons.js"></script>
+    <script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

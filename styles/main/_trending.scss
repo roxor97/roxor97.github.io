@@ -1,0 +1,294 @@
+.main{
+    .trending-gifos{
+        background: #F3F5F8 ;
+        width: 100%;
+        min-height: 500px;
+        margin-top: 45px;
+        padding-top: 46px;
+        
+        .contenedor{
+            h2{
+                font-family: 'Montserrat';
+                font-size: 20px;
+                color: #572EE5;
+                text-align: center;
+                line-height: 30px;
+                body.dark &{
+                    color: #ffffff;
+                }
+               
+            }
+            p{
+                font-family: 'roboto';
+                font-weight: 400;
+                text-align: center;
+                margin-top: 7px;
+                body.dark &{
+                    color: #ffffff;
+                }
+            }
+           
+            .contenedor-resultados{
+                width: 80%;
+                margin: 0 auto;
+                display: flex;
+                min-width: 140px;
+                justify-content:flex-start ;
+                margin-top: 32px;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                white-space: nowrap;
+               
+
+               
+                
+                .contenedor-gifos{
+                    position: relative;
+                     max-width: 357px;
+                     max-height: 275px;
+                     min-height: 140px;
+                     min-width: 275px;
+                     margin-left: 2%;
+                     overflow: hidden;                        
+
+                    .gift{
+                        width: 100%;
+                        height: 100%;
+                          .contenedor-info-tools{
+                              display: none;
+                             position: absolute;
+                              width: 100%;
+                              height: 100%;
+                              transition: 1s ease-in-out all;
+                              max-width: 357px;
+                              .tools{
+                                  position: absolute;
+                                  width: 100%;
+                                  display: none;
+                                  justify-content: flex-end;
+                                  height: 100%;
+                                  transition: 1s ease all;
+                                  cursor: pointer;
+                                  z-index: 10;
+                                  margin-top: 10px;
+                                  .icon-tools{
+                                      margin: 10px 30px 0px 0px;
+                                      cursor: pointer;
+                                      display: flex;
+                                    .icon-favorito{
+                                        width: 35px;
+                                        height: 35px;
+                                        background: url('/assets/icon-fav.svg');
+                                        background-repeat: no-repeat;
+                                        &:hover{
+                                            background: url('/assets/icon-fav-hover.svg');
+                                            background-repeat: no-repeat;
+                                        }
+                                        &.actived{
+                                            width: 32.5px;
+                                            height: 32.5px;
+                                            background: url('/assets/icon-fav-active.svg') #ffffff;
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                            border-radius: 5px;
+                                          
+                                          
+                                        }
+                                    }
+                                    .icon-descargar{
+                                        width: 35px;
+                                        height: 35px;
+                                        background: url('/assets/icon-download.svg');
+                                        background-repeat: no-repeat;
+                                        &:hover{
+                                            background: url('/assets/icon-download-hover.svg');
+                                            background-repeat: no-repeat;
+                                        }
+                                    }
+                                    .icon-escalar{ 
+                                        width: 35px;
+                                        height: 35px;
+                                        background: url('/assets/icon-max-normal.svg');
+                                        background-repeat: no-repeat;
+                                        &:hover{
+                                            background: url('/assets/icon-max-hover.svg');
+                                            background-repeat: no-repeat;
+                                        }
+        
+                                    }
+          
+                                  }
+           
+                              }
+                              .informacion{
+                                  
+                                  position: absolute;
+                                  flex-direction: column;
+                                  align-items: flex-start;
+                                  justify-content: flex-end;
+                                  width: 90%;
+                                  height: 90%;
+                                  margin-left: 18.5px;
+                                  display: none;
+                                 
+                                  .user{
+                                   font-family: 'Roboto';
+                                   font-size: 15px;
+                                   color:  #ffffff;;
+                                   text-align: center;
+                                   font-weight: 400;
+                                  }
+                                  .gift-titulo{
+                                   font-family: 'Roboto';
+                                   font-size: 16px;
+                                   color: #ffffff;
+                                   text-align: center;
+                                   font-weight: 700;
+                                  }
+           
+                              }
+                             
+                          }
+                          .imagen{
+                            width: 500px;
+                            height: 300px;
+                          }
+                       }
+
+                }
+            }
+     
+    }
+
+    body.dark &{
+        background: #222326 ;
+    }
+    }
+    .contenedor-texto-trending{
+        p{
+            color:#572EE5;
+            font-weight: lighter;
+            font-family:'Montserrat';
+            font-size: 16px;
+            margin-top: 3px;
+
+        }
+        body.dark &{
+            p{
+                color: white;
+            }
+        }
+
+    }
+}
+
+//Generales
+@media screen and(min-width: 968px){
+    .main{
+        .trending-gifos{
+            min-height: 640px;
+            margin-top: 26px;
+            padding-top: 67px;
+            
+            
+           .contenedor{
+
+               h2{
+                   font-size: 25px;
+                   line-height: 30px;
+               }
+               p{
+                   font-size: 18px;
+                   font-family: 'roboto';
+                   font-weight: 400;
+               }
+               .contenedor-resultados{
+                   width: 65%;
+                   margin-top: 55px;
+                   justify-content: flex-start;
+                   overflow: hidden;
+                   scroll-behavior: smooth;
+
+                   .sliderLeft{
+                    width: 54px;
+                    height: 54px;
+                    left: 100px;
+                    margin-top: 105px;
+                    display: flex;
+                    position: absolute;  
+                    background:url('/assets/button-slider-left.svg') ;
+                    background-repeat: no-repeat;
+    
+                    
+                    &:hover{
+                        background: url('/assets/button-slider-left-hover.svg');
+                        background-repeat: no-repeat;
+                        cursor: pointer;
+                    }
+                    body.dark &{
+                        background: url('/assets/button-slider-left-md-noct.svg');
+                        background-repeat: no-repeat;
+                    }
+                }
+    
+                .sliderRight{
+                    width: 54px;
+                    height: 54px;
+                    margin-top: 105px;
+                    display: flex;
+                    position: absolute;
+                    right: 70px;    
+                    background:url('/assets/Button-Slider-right.svg') ;
+                    background-repeat: no-repeat;
+    
+                    
+                    &:hover{
+                        background: url('/assets/Button-Slider-right-hover.svg');
+                        background-repeat: no-repeat;
+                        cursor: pointer;
+                    }
+                    body.dark &{
+                        background: url('/assets/button-slider-right-md-noct.svg');
+                        background-repeat: no-repeat;
+                    }
+                }
+                   .contenedor-gifos{
+                       padding: 10px;
+                      
+                     .gift{
+                         .contenedor-info-tools{
+                            display: flex; 
+                            &:hover{
+                            background: rgba($color:#572EE5, $alpha: 0.6);
+                            &:hover ~ .tools , .informacion{
+                                display: flex;
+                            }
+                            &:hover ~ .informacion , .tools{
+                                display: flex;
+                            }
+                         }
+                     }
+                   }
+               }
+            
+           }
+        }
+    }
+}
+}
+
+
+
+@media screen and (min-width:800px){
+
+    .trending-gifos{        
+        .contenedor{
+            p{
+                br{
+                    display: none;
+                }
+            }
+            
+        }
+    }
+ }

@@ -1,0 +1,327 @@
+@media screen and(min-width:1240px){
+    .header{
+        .contenedor{
+            .nav-bar-logo{
+                margin-left: 156px;
+                width: 100px;
+            }
+
+            .menu{
+                ul{
+                    margin-right: 156px;
+                }
+                #btn-light{
+                    display: none;
+                }
+            }
+        }   
+     }
+}
+
+//Inicio vista tablet
+@media screen and (min-width:968px){
+    .header{
+        width: 100%;
+        font-size: 20px;
+       .contenedor{
+           .nav-bar-logo{
+            display: flex;
+            margin-left: 146px;
+            margin-top: 18px;
+            margin-bottom: 12px;
+            z-index: 10;
+            background: url('/assets/logo-mobile.svg');
+            background-repeat: no-repeat;
+            background-size:contain;
+        }
+        label{
+            display: none;
+        }
+
+        .btn-x{
+            display: none;
+            visibility: hidden;
+            z-index: 0;
+        }
+        .btn-burguer{
+            display: none;
+            visibility: hidden;
+        }
+        .menu{
+            display: flex;
+            position: static;
+            width: 100%;
+            height: 80px;
+            background: none;
+            justify-content: flex-end;
+            ul{
+                margin: 36px 78px 38px 0px;
+                display: flex;
+                flex-direction: row;
+                #btn-light{
+                    display: none;
+                }
+                li{
+                   
+                    a{
+                        font-size: 14px;
+                        padding: 0;
+                        color: #572EE5;
+                        line-height: 16px;
+                        text-align: center;
+                        margin-left: 48px;
+                        transition: 0.3s ease all;
+                        text-transform: uppercase;
+                        &:hover{
+                            border-bottom: 2px solid #5ED7C6;
+                        }
+                        &:active{
+                            color: #9CAFC3;
+                            border-bottom: none;
+                        }
+                    } 
+                   
+                    .border-bottom-navbar{
+                        display: none;
+                    }
+                    .crear-gifo{
+
+                        display: block;
+                         &:hover{
+                            border-bottom: none
+                        }
+
+                    }
+                }
+
+            }
+            body.dark &{
+                background: none;
+                a{
+                    color: #ffffff;
+                }
+            }
+
+        }
+        
+    }
+}
+}
+
+
+// Inicio vista mobile
+@media screen and(min-width:750px){
+    .header{
+        .contenedor{
+            .nav-bar-logo{
+                width: 60px;
+                height: 52px;
+            }
+            .btn-burguer{
+                width: 18px;
+                height: 18px;
+                img{
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+            .btn-x{ 
+                width: 18px;
+                height: 18px;
+                img{
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+}
+
+// Fin vista mobile 
+
+//Estilos generales
+
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 95px;
+    border-top: 5px solid #572EE5;
+    background: #ffffff;
+    font-size: 22px;
+    z-index: 150 ;
+    body.dark &{
+        background: #37383C;
+    }
+    .contenedor{
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+
+        .nav-bar-logo{
+            margin: 29px 22px 17px 22px;
+            width: 56px;
+            height: 49px;
+            background: url('/assets/logo-mobile.svg');
+            background-repeat: no-repeat;
+            body.dark &{
+                background: url('/assets/logo-mobile-modo-noct.svg');
+                 background-repeat: no-repeat;
+
+                width: 56px;
+                height: 49px;
+            }
+        }
+        .checkbox{
+            display: none;
+        }
+        .btn-x{
+            width: 14px;
+            height: 14px;
+            margin:52px 27px 32px 0px;
+            color: #572EE5;
+            display: none;
+            cursor: pointer;
+            background: url('/assets/close.svg');
+            background-repeat: no-repeat;
+            body.dark &{
+            background: url('/assets/close-modo-noct.svg');
+            background-repeat: no-repeat;
+
+            }
+
+        }
+        .btn-burguer{
+            width: 15px;
+            height: 14px;
+            color: #572EE5;
+            margin:52px 27px 32px 0px;
+            cursor: pointer;
+            background: url('/assets/burger.svg');
+            background-repeat: no-repeat;
+            body.dark &{
+            background: url('/assets/burger-modo-noct.svg');
+            background-repeat: no-repeat;
+
+            }
+        }
+
+        .menu{
+            top: 0;
+            position: absolute;
+            top: 100px;
+            width: 100%;
+            height: 484px;
+            background:rgba($color: #572EE5, $alpha: 0.9);
+            transition: 1s ease all;
+            overflow: hidden;
+            ul{
+                align-items: center;
+                li{ 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                   a{
+                    position: relative;
+                    font-family: 'Montserrat';
+                    font-size: 15px;
+                    color: #FFFFFF;
+                    text-align: center;
+                    line-height: 30px;
+                    color: #ffffff;
+                    cursor: pointer;
+                    display: inline-block;
+                    padding: 15px;
+                   
+                       
+                   } 
+                
+                   .margin-top{
+                       margin-top: 0px;
+                   }
+                   .border-bottom-navbar{
+                       width: 41px;
+                      &::after{
+                        position: absolute;
+                        content: '';
+                        display: block;
+                        width: 41px;
+                        height: 1px;
+
+                        background:rgba($color: #fff, $alpha: 0.5);
+                      }
+                   }
+                   .crear-gifo{
+                    width: 54px;
+                    height: 54px;
+                    display: none;
+                    border: none;
+                    background:url('/assets/button-crear-gifo.svg') ;
+                    transition: 1s ease-out all;
+                    &:hover{
+                        background: url('/assets/CTA-crear-gifo-hover.svg');
+                        background-repeat: no-repeat;
+
+                    
+                    }
+                    &:active{ 
+                        background: url('/assets/CTA-crear-gifo-active.svg');
+                        background-repeat: no-repeat;
+
+                    }
+                    body.dark &{
+                        background: url('/assets/CTA-crear-gifo-modo-noc.svg');
+                        background-repeat: no-repeat;
+
+                        &:hover{
+                            background: url('/assets/CTA-crear-gifo-hover-modo-noc.svg');
+                            background-repeat: no-repeat;
+                        }
+                        &:active{
+                            background: url('/assets/CTA-crear-gifo-active-modo-noc.svg');
+                            background-repeat: no-repeat;
+
+                        }
+                    }
+                      
+                   }
+
+                }
+                #btn-light{
+                    display: none;
+                   
+                }
+               
+            }
+            body.dark &{
+                background: #000000;
+                
+            }
+        }
+
+        #btn-menu{
+            &:checked ~ .menu{
+                margin: 0;
+            }
+            &:not(:checked) ~ .menu{
+                margin-left: -100%;
+     
+            }
+           &:checked ~ .btn-burguer{
+               display: none;
+           }
+           &:checked ~ .btn-x{
+               display: block;
+             
+           }
+           
+        }
+    }
+    body.dark &{
+        border-top: 5px solid #000000;
+    }
+}
+
