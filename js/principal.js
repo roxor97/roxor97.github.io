@@ -119,6 +119,12 @@ const llamarAutoCompletar = (palabra) => {
             let data = resp.data;
             eliminarSugerencias()
             contenedorSugerencias.style.display = 'none'
+             if (body.className==='dark'){
+                lupa.style.background="url('/assets/close-modo-noct.svg') no-repeat"
+            }
+            else{
+                lupa.style.background= "url('/assets/close.svg') no-repeat" 
+            }
             if (data.length > 0) {
                 for (let i = 0; i < data.length; i++) {
                     dibujarSugerencias(data[i].name)
